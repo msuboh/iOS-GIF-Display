@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="MHSViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7oM-39-aoa" customClass="F3BarGauge">
+                                <rect key="frame" x="5" y="34" width="15" height="500"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yhC-FO-b4E" customClass="F3BarGauge">
+                                <rect key="frame" x="21" y="34" width="15" height="500"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8iC-ZJ-g4K" customClass="F3BarGauge">
+                                <rect key="frame" x="300" y="34" width="15" height="500"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUF-z4-JuJ" customClass="F3BarGauge">
+                                <rect key="frame" x="284" y="34" width="15" height="500"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="BOH-H9-m3V">
+                                <rect key="frame" x="18" y="527" width="284" height="31"/>
+                                <connections>
+                                    <action selector="skipAudioActn:" destination="vXZ-lx-hvc" eventType="valueChanged" id="7fN-Jh-cwx"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AfT-Hb-aXC">
+                                <rect key="frame" x="20" y="20" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="BOH-H9-m3V" secondAttribute="bottom" constant="11" id="2Pm-sC-kpq"/>
+                            <constraint firstItem="KUF-z4-JuJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="284" id="6l8-GT-sGI"/>
+                            <constraint firstItem="7oM-39-aoa" firstAttribute="top" secondItem="8iC-ZJ-g4K" secondAttribute="top" id="9v4-28-ztQ"/>
+                            <constraint firstItem="7oM-39-aoa" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="AAL-ai-fJa"/>
+                            <constraint firstItem="7oM-39-aoa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="5" id="Ah6-7J-jqR"/>
+                            <constraint firstItem="yhC-FO-b4E" firstAttribute="leading" secondItem="7oM-39-aoa" secondAttribute="trailing" constant="1" id="DUt-Ej-cUs"/>
+                            <constraint firstAttribute="trailing" secondItem="BOH-H9-m3V" secondAttribute="trailing" constant="20" symbolic="YES" id="Ier-3v-T5a"/>
+                            <constraint firstItem="7oM-39-aoa" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="14" id="K94-In-R6O"/>
+                            <constraint firstItem="7oM-39-aoa" firstAttribute="top" secondItem="KUF-z4-JuJ" secondAttribute="top" id="QeB-TX-gJH"/>
+                            <constraint firstItem="BOH-H9-m3V" firstAttribute="leading" secondItem="7oM-39-aoa" secondAttribute="trailing" id="TtA-m6-V93"/>
+                            <constraint firstItem="7oM-39-aoa" firstAttribute="bottom" secondItem="yhC-FO-b4E" secondAttribute="bottom" id="VFu-xO-UzU"/>
+                            <constraint firstItem="7oM-39-aoa" firstAttribute="bottom" secondItem="8iC-ZJ-g4K" secondAttribute="bottom" id="XJ7-2l-Rhh"/>
+                            <constraint firstItem="8iC-ZJ-g4K" firstAttribute="leading" secondItem="BOH-H9-m3V" secondAttribute="trailing" id="XZx-Uf-hZj"/>
+                            <constraint firstItem="7oM-39-aoa" firstAttribute="top" secondItem="yhC-FO-b4E" secondAttribute="top" id="anr-4F-jnm"/>
+                            <constraint firstItem="8iC-ZJ-g4K" firstAttribute="leading" secondItem="KUF-z4-JuJ" secondAttribute="trailing" constant="1" id="hgU-gw-lMk"/>
+                            <constraint firstItem="BOH-H9-m3V" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="kNN-w5-p6J"/>
+                            <constraint firstItem="BOH-H9-m3V" firstAttribute="trailing" secondItem="AfT-Hb-aXC" secondAttribute="trailing" id="mOX-iH-B21"/>
+                            <constraint firstItem="7oM-39-aoa" firstAttribute="bottom" secondItem="KUF-z4-JuJ" secondAttribute="bottom" id="mXr-87-eyk"/>
+                            <constraint firstAttribute="trailing" secondItem="8iC-ZJ-g4K" secondAttribute="trailing" constant="5" id="rlJ-6Z-GlL"/>
+                            <constraint firstItem="AfT-Hb-aXC" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="20" symbolic="YES" id="tmw-sJ-JuN"/>
+                            <constraint firstAttribute="trailing" secondItem="yhC-FO-b4E" secondAttribute="trailing" constant="284" id="u3t-dZ-aBK"/>
+                            <constraint firstItem="BOH-H9-m3V" firstAttribute="leading" secondItem="AfT-Hb-aXC" secondAttribute="leading" id="zOG-WQ-DCE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="customRangeBar1" destination="7oM-39-aoa" id="c8B-Nz-tP4"/>
+                        <outlet property="customRangeBar2" destination="8iC-ZJ-g4K" id="FeG-tc-1Po"/>
+                        <outlet property="customRangeBar3" destination="yhC-FO-b4E" id="v4N-yD-5Cl"/>
+                        <outlet property="customRangeBar4" destination="KUF-z4-JuJ" id="yRR-OP-UDc"/>
+                        <outlet property="remTime" destination="AfT-Hb-aXC" id="xBd-r1-rmj"/>
+                        <outlet property="skipAudio" destination="BOH-H9-m3V" id="Hl6-BJ-Qts"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
